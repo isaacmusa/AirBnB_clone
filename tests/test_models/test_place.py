@@ -1,16 +1,26 @@
 #!/usr/bin/python3
-""" testing Place """
+"""
+Test suits for places
+"""
+
+import os
+import models
 import unittest
-import pep8
-from models.place import Place
+from datetime import datetime
+from models.base_model import BaseModel
 
-class Place_testing(unittest.TestCase):
-    """ check BaseModel """
 
-    def testpep8(self):
-        """ testing codestyle """
-        pepstylecode = pep8.StyleGuide(quiet=True)
-        path_user = 'models/place.py'
-        result = pepstylecode.check_files([path_user])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+class TestPlace(unittest.TestCase):
+    """
+    Tests for amenities
+    """
+
+    def test_name(self):
+        """
+        Tests for name inputs
+        """
+        pass
+
+
+if __name__ == '__main__':
+    unittest.main()

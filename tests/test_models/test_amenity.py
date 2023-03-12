@@ -1,16 +1,25 @@
 #!/usr/bin/python3
-""" testing Amenity """
+"""
+Test suits for amenities
+"""
+import os
+import models
 import unittest
-import pep8
-from models.amenity import Amenity
+from datetime import datetime
+from models.base_model import BaseModel
 
-class Amenity_testing(unittest.TestCase):
-    """ check BaseModel """
 
-    def testpep8(self):
-        """ testing codestyle """
-        pepstylecode = pep8.StyleGuide(quiet=True)
-        path_user = 'models/amenity.py'
-        result = pepstylecode.check_files([path_user])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+class TestAmenity(unittest.TestCase):
+    """
+    Tests for amenities
+    """
+
+    def test_name(self):
+        """
+        Tests for name inputs
+        """
+        pass
+
+
+if __name__ == '__main__':
+    unittest.main()
